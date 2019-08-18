@@ -98,7 +98,7 @@ func main() {
 				fmt.Fprintf(os.Stderr, "failed to save file: %s\n", err)
 			}
 
-			line := fmt.Sprintf("%s %s (%s)\n", path, res.request.URL(), res.status)
+			line := fmt.Sprintf("%s (%s)\n",res.request.URL(), res.status)
 			fmt.Fprintf(index, "%s", line)
 			if c.verbose {
 				fmt.Printf("%s", line)
